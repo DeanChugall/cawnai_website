@@ -1,59 +1,74 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "CAWN"
-  text: ""
-  tagline: CONTINUOUS ACOUSTIC WAVE NETWORKS 
+  name: "CAWN V21"
+  text: "Continuous Acoustic Wave Networks"
+  tagline: A pure linear-time O(L) sequence model that completely discards the O(L²) Transformer Attention wall. Infinite context, flat VRAM.
+  image:
+    src: /assets/aida_hero.png
+    alt: CAWN Hero Image
   actions:
     - theme: brand
-    #   text: Markdown Examples
-    #   link: /markdown-examples
-    # - theme: alt
-    #   text: API Examples
-    #   link: /api-examples
+      text: Explore Architecture
+      link: /architecture
+    - theme: alt
+      text: 🔴 Live DevLog
+      link: /devlog/day-1-2-waking-up
 
 features:
-  # - title: Feature A
-  #   details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  # - title: Feature B
-  #   details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  # - title: Feature Csdfsd
-  #   details: Lorem ipsum dolor sit amet, consectetur adipiscing elitdsdf
+  - title: 🌊 Holographic Phase Binding
+    details: Keys and Values are mathematically bound via angular addition. Destructive interference unpacks exact historical values in O(1) time, solving the SSM "Needle In A Haystack" degradation.
+  - title: 🚀 Flat VRAM O(L) Scaling
+    details: 100% Custom Fused Triton kernels process the continuous complex domain entirely within SRAM. Scales identically from 512 to 2,000,000 tokens with zero quadratic explosion.
+  - title: ⚙️ Hybrid Muon-AdamW Routing
+    details: 2D structural projections undergo Newton-Schulz orthogonalization via Muon, while fragile 1D phase gates are insulated in AdamW. Brutally stable continuous optimization.
 ---
 
-<a href="/images/wb_dash_1.png" target="_blank">
-  <img src="/images/wb_dash_1.png" alt="W&B Acoustic Gates and Training Dynamics" style="cursor: pointer; border-radius: 8px; border: 1px solid #333;" />
-</a>
+<br>
+
+<div align="center">
+  <h3>Live Pre-Training Telemetry</h3>
+  <a href="/images/wb_dash_1.png" target="_blank">
+    <img src="/images/wb_dash_1.png" alt="W&B Acoustic Gates and Training Dynamics" style="cursor: pointer; border-radius: 8px; border: 1px solid #333; max-width: 90%; box-shadow: 0 4px 20px rgba(0,0,0,0.4);" />
+  </a>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div align="center">
+  <h3>The Temporal Ocean: How CAWN Works</h3>
+</div>
 
 ```text
-☁️ [ OBLAK PODATAKA ]      Ulazni Tokeni (Tekst / Znanje)
+☁️ [ DATA CLOUD ]          Input Tokens (Text / Knowledge)
           │
           ▼
-💧 [ KAPLJICA PADA ]       Faza i Amplituda se računaju (Write Binding)
-          │                p_r = (a_v * beta) * cos(phi)
-          │                p_i = (a_v * beta) * sin(phi)
+💧 [ PHASE INJECTION ]     Phase and Amplitude Computation (Write Binding)
+          │                P_r = (A_v * beta) * cos(phi_k + phi_v)
+          │                P_i = (A_v * beta) * sin(phi_k + phi_v)
           │
-   〰️〰️〰️ ▼ 〰️〰️〰️          [ ZLATNI PRESEK (Frekventno Grananje) ]
-  〰️  〰️  〰️  〰️  〰️       Brzi i spori harmonici (Fast & Slow Oscillators).
-    〰️  〰️  〰️  〰️         Matematički obezbeđuju da se talasi šire asimetrično
-                           i da se NIKADA potpuno ne ponište (Nyquist limit).
+   〰️〰️〰️ ▼ 〰️〰️〰️          [ GOLDEN RATIO HARMONICS ]
+  〰️  〰️  〰️  〰️  〰️       Fast & Slow Oscillators decoupled by phi (1.618).
+    〰️  〰️  〰️  〰️         Ensures waves spread asymmetrically and NEVER
+                           fully destructively overlap (Nyquist limit).
           │
-🌊 ═══════▼═══════ 🌊      [ POVRŠINA OKEANA (Triton Phase Accumulator) ]
-   [ KOMPLEKSNO  ]         P_r = P_r_prev * gamma * cos(θ) ... + p_r
-   [ STANJE (C)  ]         Ovo je fiksni O(1) Bafer! Svi tokeni su ovde, 
-🌊 ═══════════════ 🌊      stopljeni u jedan jedini masivni interferentni talas.
+🌊 ═══════▼═══════ 🌊      [ THE TEMPORAL OCEAN (Triton Phase Accumulator) ]
+   [ COMPLEX     ]         M_r = M_r_prev * gamma * cos(θ) ... + P_r
+   [ STATE (C)   ]         Fixed O(1) SRAM Buffer. All historical tokens 
+🌊 ═══════════════ 🌊      are fused into a single massive interference wave.
           │
-❄️ [ BAČENA MREŽA ]        [ HOLOGRAFSKO ODMOTAVANJE (Read / Query Conjugate) ]
-          │                Sistem traži "Iglu". Množi ceo okean sa upitom (Q*).
-          │                Ovo poništava šum i "zamrzava" samo onaj talas
-          │                koji je u rezonanci sa postavljenim upitom.
+❄️ [ QUERY CASTING ]       [ HOLOGRAPHIC UNBINDING (Read / Query Conjugate) ]
+          │                Retrieving the "Needle". Multiplying the ocean by Q*.
+          │                Destructive interference cancels the noise and isolates
+          │                only the specific wave resonating with the query.
           ▼
-🛡️ [ TERMALNI ŠTIT ]       [ RMSNorm KAVEZ (Random Walk Stabilization) ]
-          │                Fizika kaže da tečnost "ključa" od termalnog šuma.
-          │                Kod ovde nasilno up-castuje u FP32 i "smrzava"
-          │                varijansu na normalnu distribuciju (sprečava eksploziju).
+🛡️ [ THERMAL SHIELD ]      [ UNBINDING RMSNORM (Random Walk Stabilization) ]
+          │                Dense superpositions naturally generate thermal noise.
+          │                The network structurally upcasts to FP32 and clamps
+          │                the variance, preventing gradient explosions.
           ▼
-💎 [ KRISTAL ]             IZLAZNI TOKEN (Ekstrakcija)
-                           Pristignuti podatak izvučen iz haosa. "Needle" je nađena!
+💎 [ THE CRYSTAL ]         OUTPUT TOKEN (Extraction)
+                           The exact historical fact extracted from the chaos.
