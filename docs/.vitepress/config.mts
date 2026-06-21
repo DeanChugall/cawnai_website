@@ -37,7 +37,8 @@ export default defineConfig({
       {
         text: 'Live Pre-training DevLog',
         items: [
-          { text: '1k Steps: Waking the Ocean', link: '/devlog/1k_steps' }
+          { text: '1k Steps: Waking the Ocean', link: '/devlog/1k_steps' },
+          { text: '3k Steps: Overcoming the "Path of Least Resistance"', link: '/devlog/3k_steps' }
         ]
       }
     ],
